@@ -358,11 +358,11 @@
    create policy "public delete photos" on storage.objects for delete using (bucket_id='photos');
    ================================================================ */
 const SUPABASE_URL      = "https://supabase.com/dashboard/project/klwbozvsxsbtarrsyulh/storage/files/buckets/photos";  // e.g. "https://abcdefgh.supabase.co"
-const SUPABASE_ANON_KEY = "sb_publishable_0-eOZkAvNpd-2Lpf42j9yQ_ASksrwQF";      // long key starting with "eyJ"
+const SUPABASE_ANON_KEY = "sb_publishable_MDtDYWCIrpujO0WE2uYkuQ_y6mygfpr";      // long key starting with "eyJ"
 const BUCKET = "photos";
 
 const sbConfigured = SUPABASE_URL.startsWith("https://")
-                  && SUPABASE_ANON_KEY.startsWith("eyJ")
+                  && SUPABASE_ANON_KEY.startsWith("sb_")
                   && typeof supabase !== "undefined";
 let sb = sbConfigured ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
 
