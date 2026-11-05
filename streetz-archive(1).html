@@ -357,8 +357,8 @@
    create policy "public upload photos" on storage.objects for insert with check (bucket_id='photos');
    create policy "public delete photos" on storage.objects for delete using (bucket_id='photos');
    ================================================================ */
-const SUPABASE_URL      = "PASTE_YOUR_SUPABASE_URL_HERE";  // e.g. "https://abcdefgh.supabase.co"
-const SUPABASE_ANON_KEY = "PASTE_YOUR_ANON_KEY_HERE";      // long key starting with "eyJ"
+const SUPABASE_URL      = "https://supabase.com/dashboard/project/klwbozvsxsbtarrsyulh/storage/files/buckets/photos";  // e.g. "https://abcdefgh.supabase.co"
+const SUPABASE_ANON_KEY = "sb_publishable_0-eOZkAvNpd-2Lpf42j9yQ_ASksrwQF";      // long key starting with "eyJ"
 const BUCKET = "photos";
 
 const sbConfigured = SUPABASE_URL.startsWith("https://")
